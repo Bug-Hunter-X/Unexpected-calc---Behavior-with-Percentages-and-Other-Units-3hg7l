@@ -1,0 +1,18 @@
+/* bugSolution.css */
+/* Instead of using mixed units, use only one unit type (e.g., pixels) to avoid unexpected behavior.*/
+.container {
+  width: 500px; /* or any fixed width */
+  height: calc(50% - 20px); /* Avoid mixing percentages with pixels */
+}
+/* Alternatively, If you must use percentage and pixels, try a different approach: */
+.container {
+  width: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;/* Make sure padding and border are included in the element's total width and height */
+}
+/*Or consider using viewport units (vw, vh) for a more flexible layout */
+.container {
+ width: 50vw;
+ height: calc(50vh - 20px);
+}
